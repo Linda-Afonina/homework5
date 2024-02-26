@@ -32,6 +32,7 @@ public class Main {
         }
 
         System.out.println("Задача 3.");
+        // solution 1
         int year = 2021;
         if (year >= 1584) {
             if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
@@ -45,22 +46,32 @@ public class Main {
             System.out.println("Понятие високосного года еще не введено.");
         }
 
+        // solution 2
+        if (year >= 1584 && (year % 4 == 0 && year % 100 != 0 || year % 400 ==0)) {
+            System.out.println(year + " год является високосным.");
+        }
+        else {
+            System.out.println(year + " год не является високосным.");
+        }
+
         System.out.println("Задача 4.");
-        int deliveryDistance = 95;
+        int deliveryDistance = 177;
         int daysForDelivery;
         if (deliveryDistance < 20) {
             daysForDelivery = 1;
+            System.out.println("Потребуется дней: " + daysForDelivery);
         }
         else if (deliveryDistance >= 20 && deliveryDistance <= 60) {
             daysForDelivery = 2;
+            System.out.println("Потребуется дней: " + daysForDelivery);
         }
         else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             daysForDelivery = 3;
+            System.out.println("Потребуется дней: " + daysForDelivery);
         }
         else {
-            daysForDelivery = -1;
+            System.out.println("Нет доставки.");;
         }
-        System.out.println("Потребуется дней: " + daysForDelivery);
 
         System.out.println("Задача 5.");
         int monthNumber = 12;
